@@ -1,0 +1,152 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <title>NeutTS Studio</title>
+
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+
+<body>
+
+<div class="background"></div>
+
+<div class="container">
+
+    <h1>🎙️ NeutTS Studio</h1>
+
+    <p class="subtitle">
+        Générateur de voix IA
+    </p>
+
+    <textarea
+        id="text"
+        placeholder="Entre une phrase..."></textarea>
+
+
+    <h2>Choisis une voix</h2>
+
+    <div class="speakers">
+
+        <div class="speaker selected"
+             data-speaker="emily">
+
+            <img src="{% static 'img/emily.png' %}">
+
+            <span>Emily</span>
+
+        </div>
+
+
+        <div class="speaker"
+             data-speaker="paul">
+
+            <img src="{% static 'img/paul.png' %}">
+
+            <span>Paul</span>
+
+        </div>
+
+
+        <div class="speaker"
+             data-speaker="sophie">
+
+            <img src="{% static 'img/sophie.png' %}">
+
+            <span>Sophie</span>
+
+        </div>
+
+
+        <div class="speaker"
+             data-speaker="steven">
+
+            <img src="{% static 'img/steven.png' %}">
+
+            <span>Steven</span>
+
+        </div>
+
+    </div>
+
+
+
+    <h2>Choisis une émotion</h2>
+
+    <div class="emotions">
+
+        <button class="emotion selected"
+                data-emotion="neutral">
+            😐
+        </button>
+
+        <button class="emotion"
+                data-emotion="happy">
+            😀
+        </button>
+
+        <button class="emotion"
+                data-emotion="sad">
+            😢
+        </button>
+
+        <button class="emotion"
+                data-emotion="angry">
+            😠
+        </button>
+
+        <button class="emotion"
+                data-emotion="surprised">
+            😲
+        </button>
+
+        <button class="emotion"
+                data-emotion="fearful">
+            😨
+        </button>
+
+        <button class="emotion"
+                data-emotion="disgusted">
+            🤢
+        </button>
+
+    </div>
+
+
+
+    <button
+        id="generate">
+
+        Générer la voix
+
+    </button>
+
+
+    <div
+        id="loading">
+
+        Génération...
+
+    </div>
+
+
+    <audio
+        id="player"
+        controls>
+
+    </audio>
+
+</div>
+
+
+<script src="{% static 'js/app.js' %}"></script>
+
+</body>
+
+</html>
